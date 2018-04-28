@@ -64,7 +64,7 @@ var PlaylistTable = React.createClass({
       if (firstPage) {
         return $.when.apply($, [
           window.Helpers.apiCall(
-            "https://api.spotify.com/v1/users/" + userId + "/starred",
+            "https://api.spotify.com/v1/me/tracks",
             this.props.access_token
           ),
           window.Helpers.apiCall(
@@ -232,7 +232,7 @@ var PlaylistsExporter = {
       // Initialize requests with starred playlist
       var requests = [
         window.Helpers.apiCall(
-          "https://api.spotify.com/v1/users/" + userId + "/starred",
+          "https://api.spotify.com/v1/me/tracks",
           access_token
         )
       ];
