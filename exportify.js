@@ -349,7 +349,7 @@ var PlaylistExporter = {
 
       csvContent = '';
       tracks.forEach(function(infoArray, index){
-        dataString = infoArray.join(",");
+        dataString = infoArray.join(";");
         csvContent += index < tracks.length ? dataString+ "\n" : dataString;
       });
 
